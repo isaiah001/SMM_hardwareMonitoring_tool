@@ -1,0 +1,38 @@
+[defines]
+  INF_VERSION = 0x00010005 
+  BASE_NAME = HmonSmm
+  FILE_GUID = 22D5AE41-147E-4C44-AE72-ECD9BBB455C3
+  MODULE_TYPE = DXE_SMM_DRIVER
+  ENTRY_POINT = HmonEntry
+
+[Sources]
+  HmonSmm.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  IntelFrameworkPkg/IntelFrameworkPkg.dec  
+  IntelFrameworkModulePkg/IntelFrameworkModulePkg.dec  
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  IoLib
+
+
+[Protocols]
+gEfiSmmBaseProtocolGuid
+gEfiSmmBase2ProtocolGuid
+gEfiSimpleTextOutProtocolGuid
+gEfiSmmCpuProtocolGuid
+gEfiSmmEndOfDxeProtocolGuid
+gEfiSmmPciRootBridgeIoProtocolGuid
+gEfiSmmPeriodicTimerDispatchProtocolGuid 
+gEfiSmmIoTrapDispatch2ProtocolGuid
+
+[Depex]
+gEfiSioProtocolGuid
+
+  
+
+

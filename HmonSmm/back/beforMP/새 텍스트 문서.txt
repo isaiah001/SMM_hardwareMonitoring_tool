@@ -1,0 +1,36 @@
+initialized = int.from_bytes(segment.read(byte_count=1, offset=intra_offset), byteorder='little')))
+
+initialized = int.from_bytes(segment.read(byte_count=4, offset=0), byteorder='little')))
+intra_offset += 1
+suppress = int.from_bytes(segment.read(byte_count=1, offset=intra_offset), byteorder='little')))
+intra_offset += 1
+only = int.from_bytes(segment.read(byte_count=1, offset=intra_offset), byteorder='little')))
+intra_offset += 1
+halt = int.from_bytes(segment.read(byte_count=1, offset=intra_offset), byteorder='little'))+"\n")
+intra_offset += 1
+
+intra_offset += sizeof_pthread_mutex_t # mutex_a
+total_a = int.from_bytes(segment.read(byte_count=8, offset=intra_offset), byteorder='little')))
+intra_offset += 8
+total_a_flag = int.from_bytes(segment.read(byte_count=1, offset=intra_offset), byteorder='little')))
+intra_offset += 1
+
+intra_offset += sizeof_pthread_mutex_t # mutex_b
+total_b = int.from_bytes(segment.read(byte_count=8, offset=intra_offset), byteorder='little')))
+intra_offset += 8
+long_b = int.from_bytes(segment.read(byte_count=8, offset=intra_offset), byteorder='little')))
+intra_offset += 8
+total_b_flag = int.from_bytes(segment.read(byte_count=1, offset=intra_offset), byteorder='little')))
+intra_offset += 1
+
+intra_offset += sizeof_pthread_mutex_t # mutex_c
+total_c = int.from_bytes(segment.read(byte_count=8, offset=intra_offset), byteorder='little')))
+intra_offset += 8
+c_flag = int.from_bytes(segment.read(byte_count=1, offset=intra_offset), byteorder='little')))
+intra_offset += 1
+
+intra_offset += sizeof_pthread_mutex_t # open pnl mutex
+total_d = int.from_bytes(segment.read(byte_count=8, offset=intra_offset), byteorder='little')))
+intra_offset += 8
+total_d_flag = int.from_bytes(segment.read(byte_count=1, offset=intra_offset), byteorder='little')))
+intra_offset += 1
